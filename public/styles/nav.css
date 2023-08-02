@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 120px;
+  padding: 2em 1.5em;
+  background-color: #4056a1;
+  color: #ffffff;
+  position: fixed;
+}
+
+.nav-logo {
+  font-size: 1.5em;
+}
+
+.nav-write {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav a,
+nav i {
+  display: block;
+}
+
+nav i {
+  color: red;
+}

@@ -1,0 +1,17 @@
+header {
+  height: 520px;
+  width: 100%;
+  padding-top: 150px;
+  text-align: center;
+  background-color: #d69c28;
+  background-image: url('/images/food.png');
+}
+
+header h2 {
+  font-weight: 300;
+  color: #ffffff;
+}
+
+header h2 span {
+  font-weight: 600;
+}

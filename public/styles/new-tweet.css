@@ -1,0 +1,36 @@
+button {
+  cursor: pointer;
+}
+
+.new-tweet label {
+  position: relative;
+  font-weight: 600;
+}
+
+.new-tweet textarea {
+  position: relative;
+  width: 100%;
+  line-height: 1;
+  height: 3em;
+  border: none;
+  border-bottom: 4px solid #545149;
+  background-color: transparent;
+}
+
+.new-tweet div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Bungee', cursive;
+}
+
+.new-tweet button {
+  background-color: #4056a1;
+  color: #ffffff;
+  border: none;
+  padding: 0.5em;
+}
+
+.counter-over {
+  color: red;
+}
