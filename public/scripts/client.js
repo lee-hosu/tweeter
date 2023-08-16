@@ -35,9 +35,7 @@ $(document).ready(() => {
   };
 
   const createTweetElement = function (tweet) {
-    let $tweet =
-      /* Your code for creating the tweet element */
-      `
+    let $tweet = `
 <article class="tweet">
 <header class="tweet-header">
   <div class="user-name">
@@ -60,9 +58,26 @@ $(document).ready(() => {
 </footer>
 </article>
 `;
-
     return $tweet;
   };
 
   renderTweets(data);
+
+  // Listen to Form submit event
+  const $newTweetForm = $('form');
+  $newTweetForm.on('submit', function (event) {
+    event.preventDefault();
+    let message = $(this).serialize();
+    $.ajax({
+      type: 'POST',
+      url: '/tweets',
+      data: message,
+      success: function (response) {
+        console.log('Success:', response);
+      },
+      error: function (error) {
+        console.log('Error:', error);
+      },
+    });
+  });
 });
