@@ -15,3 +15,20 @@ header h2 {
 header h2 span {
   font-weight: 600;
 }
+
+@media only screen and (min-width: 980px) {
+  header:not(.tweet-header) {
+    width: 30%;
+    max-width: 300px;
+    float: left;
+    height: auto;
+    padding: 1rem;
+    margin: 200px 2%;
+  }
+
+  main {
+    width: 60%;
+    float: left;
+    margin-top: 170px;
+  }
+}

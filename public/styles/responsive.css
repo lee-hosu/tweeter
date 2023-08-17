@@ -1,0 +1,22 @@
+@media only screen and (min-width: 980px) {
+  header:not(.tweet-header) {
+    height: auto;
+    max-height: 400px;
+    padding: 1rem;
+    margin: 200px 2%;
+  }
+
+  main {
+    margin-top: 170px;
+  }
+
+  nav {
+    background-color: #4056a1;
+  }
+
+  .outer-container {
+    margin: 0 auto;
+    max-width: 1280px;
+    flex-direction: row;
+  }
+}

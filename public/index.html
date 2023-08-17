@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/responsive.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -42,6 +42,7 @@
       type="text/javascript"
       src="/scripts/composer-char-counter.js"
     ></script>
+    <script type="text/javascript" src="/scripts/layout.js"></script>
   </head>
 
   <body>
@@ -53,34 +54,35 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header>
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <div>
-        <h2><span>First</span> Last</h2>
-      </div>
-    </header>
-    <main>
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form
-          action="/tweets"
-          method="post"
-          enctype="application/x-www-form-urlencoded"
-        >
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section id="tweets-container"></section>
-    </main>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <div class="outer-container">
+      <header>
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <div>
+          <h2><span>First</span> Last</h2>
+        </div>
+      </header>
+      <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form
+            action="/tweets"
+            method="post"
+            enctype="application/x-www-form-urlencoded"
+          >
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+      </main>
+    </div>
   </body>
 </html>
