@@ -7,6 +7,12 @@ $(document).ready(() => {
   };
 
   const createTweetElement = function (tweet) {
+    const escape = function (str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
     let $tweet = `
 <article class="tweet">
 <header class="tweet-header">
@@ -17,7 +23,7 @@ $(document).ready(() => {
   <span class="user-id">${tweet.user.handle}</span>
 </header>
 <p class="post-content">
-  ${tweet.content.text}
+  ${escape(tweet.content.text)}
 </p>
 <div class="divider"></div>
 <footer class="tweet-footer">
@@ -30,6 +36,7 @@ $(document).ready(() => {
 </footer>
 </article>
 `;
+
     return $tweet;
   };
 
