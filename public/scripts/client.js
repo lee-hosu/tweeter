@@ -21,7 +21,7 @@ $(document).ready(() => {
 </p>
 <div class="divider"></div>
 <footer class="tweet-footer">
-  <span class="post-date">${tweet.created_at}</span>
+  <span class="post-date timeago">${timeago.format(tweet.created_at)}</span>
   <div class="icons">
     <i class="fa fa-flag"></i>
     <i class="fa fa-retweet"></i>
