@@ -58,16 +58,18 @@ $(document).ready(() => {
 
   // Listen to Form submit event
   const $newTweetForm = $('form');
+  const $alert = $('.alert');
   $newTweetForm.on('submit', function (event) {
     event.preventDefault();
 
     // Form Validation
     const tweetText = $(this).find('textarea[name="text"]').val();
     if (!tweetText || tweetText.trim().length === 0) {
-      alert('Tweet cannot be empty!');
+      $alert.text('⚠️ Tweet cannot be empty!').slideDown();
     } else if (tweetText.length > 140) {
-      alert('Tweet cannot exceed 140 characters!');
+      $alert.text('⚠️ Tweet cannot exceed 140 characters!').slideDonw();
     } else {
+      $alert.slideUp();
       let message = $(this).serialize();
       $.ajax({
         type: 'POST',
