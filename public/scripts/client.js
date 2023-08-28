@@ -53,18 +53,27 @@ $(document).ready(() => {
   const $newTweetForm = $('form');
   $newTweetForm.on('submit', function (event) {
     event.preventDefault();
-    let message = $(this).serialize();
-    $.ajax({
-      type: 'POST',
-      url: '/tweets',
-      data: message,
-      success: function (response) {
-        console.log('Success:', response);
-        loadTweets();
-      },
-      error: function (error) {
-        console.log('Error:', error);
-      },
-    });
+
+    // Form Validation
+    const tweetText = $(this).find('textarea[name="text"]').val();
+    if (!tweetText || tweetText.trim().length === 0) {
+      alert('Tweet cannot be empty!');
+    } else if (tweetText.length > 140) {
+      alert('Tweet cannot exceed 140 characters!');
+    } else {
+      let message = $(this).serialize();
+      $.ajax({
+        type: 'POST',
+        url: '/tweets',
+        data: message,
+        success: function (response) {
+          console.log('Success:', response);
+          loadTweets();
+        },
+        error: function (error) {
+          console.log('Error:', error);
+        },
+      });
+    }
   });
 });
