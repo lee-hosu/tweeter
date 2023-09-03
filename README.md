@@ -6,7 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## FINAL PRODUCT
 
-!["Screenshot main page in desktop size"](https://github.com/lee-hosu/docs/screenshot-tweeter.png)
+!["Screenshot main page in desktop size"](https://github.com/lee-hosu/tweeter/blob/master/docs/screenshot-tweeter.png?raw=true)
 
 ## Getting Started
 
